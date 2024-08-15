@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="js/products.js"></script>
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body onload="fetchUserProducts()">
+    <div class="container">
+        <h1 class="text-center">My Products</h1>
+        <div class="text-right">
+            <button class="btn btn-primary" onclick="logOut()">Logout</button>
+            <button class="btn btn-primary" onclick="window.location.href='home.html'">Home</button>
+            <button class="btn btn-primary" onclick="window.location.href='addProduct.html'">Add New Product</button>
+        </div>
+        <div id="userProductContainer" class="row"></div>
+    </div>
+    
+    <script>
+        function logOut() {
+            sessionStorage.clear();
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

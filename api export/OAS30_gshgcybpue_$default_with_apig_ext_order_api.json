@@ -1,0 +1,126 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "order",
+    "version" : "2024-06-23 13:49:40UTC"
+  },
+  "servers" : [ {
+    "url" : "https://gshgcybpue.execute-api.us-east-1.amazonaws.com/{basePath}",
+    "variables" : {
+      "basePath" : {
+        "default" : ""
+      }
+    }
+  } ],
+  "paths" : {
+    "/order/{Orderid}/{Userid}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /order/{Orderid}/{Userid}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:580139618706:function:order_info/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "put" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for PUT /order/{Orderid}/{Userid}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:580139618706:function:order_info/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /order/{Orderid}/{Userid}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:580139618706:function:order_info/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "Orderid",
+        "in" : "path",
+        "description" : "Generated path parameter for Orderid",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      }, {
+        "name" : "Userid",
+        "in" : "path",
+        "description" : "Generated path parameter for Userid",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/orders" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /orders"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:580139618706:function:order_info/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/add-order/{Userid}" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /add-order/{Userid}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:580139618706:function:order_info/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "Userid",
+        "in" : "path",
+        "description" : "Generated path parameter for Userid",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    }
+  },
+  "x-amazon-apigateway-cors" : {
+    "allowMethods" : [ "DELETE", "GET", "POST", "PUT" ],
+    "maxAge" : 300,
+    "allowCredentials" : true,
+    "allowOrigins" : [ "http://*", "https://*" ]
+  },
+  "x-amazon-apigateway-importexport-version" : "1.0"
+}

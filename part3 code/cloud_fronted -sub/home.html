@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <script src="js/products.js" defer></script>
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+        .header-buttons {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body onload="fetchAllProducts()">
+    <div class="container">
+        <div class="header-buttons">
+            <button class="btn btn-primary" onclick="window.location.href='editUser.html'">Edit User Profile</button>
+            <button class="btn btn-secondary" onclick="window.location.href='myProducts.html'">My Products</button>
+            <button class="btn btn-danger" onclick="logOut()">Log Out</button>
+        </div>
+        <h1 class="text-center">Products</h1>
+        <div id="productContainer" class="row"></div>
+    </div>
+</body>
+</html>
